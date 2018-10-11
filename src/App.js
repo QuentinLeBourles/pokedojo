@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Cards from './Cards';
+import { Container, Row, Col } from 'reactstrap';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <Container>
+        <Row>
+          <Col md="4">
+        <Cards 
+         name="Pikachu" 
+         type='electrique'
+         img= 'https://pbs.twimg.com/profile_images/791917801409765376/e9Bfrx_D_400x400.jpg'
+         life= {true} />
+         </Col>
+         <Col md="4">
+        <Cards 
+         name="Bulbizarre" 
+         type='Plante'
+         img= 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwMOjzFWdFSrBBpuFl3I2SqgtKz-AMSdPJ0uE1DG0afqjsbH60'
+         life={false} />
+         </Col>
+         </Row>
+         </Container>
       </div>
     );
   }
